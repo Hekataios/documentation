@@ -38,7 +38,26 @@ export default function Home() {
       description="A cartographer for roleplayers in meta-worlds.">
       <HomepageHeader />
       <main>
-        
+        <div>
+          <h2>A world map</h2>
+          <p>Map roleplaying hubs and events in the world.</p>
+        </div>
+        <div>
+          <h2>Event calendar</h2>
+          <p>Manage events accross the world and help organize roleplay.</p>
+        </div>
+        <div>
+          <h2>News management</h2>
+          <p>Stay informed about the world activities.</p>
+        </div>
+        <div>
+          <h2>Revive memories</h2>
+          <p>Create a timeline of the roleplay events in the coommunity.</p>
+        </div>
+        <div>
+          <h2>Open-ecosystem</h2>
+          <p>Designed as API, and open-source. For developers, it means it's easier to develop tools from the same source of data.</p>
+        </div>
       </main>
     </Layout>
   );
