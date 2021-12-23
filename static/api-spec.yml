@@ -8,7 +8,7 @@ paths:
   /locations:
     get:
       description: Get locations
-      parameters: []
+      operationId: queryLocations
       tags:
         - locations
       responses:
@@ -16,6 +16,7 @@ paths:
           description: List of locations
     post:
       description: Add a location
+      operationId: addLocation
       tags:
         - locations
       responses:
@@ -26,6 +27,7 @@ paths:
       - $ref: '#/components/parameters/locationId'
     get:
       description: Get a location.
+      operationId: getLocation
       tags:
         - locations
       responses:
@@ -33,23 +35,77 @@ paths:
           description: Location retrieved.
     patch:
       description: Update a location.
+      operationId: updateLocation
       tags:
         - locations
       responses:
         '204':
           description: Location updated.
-  /locations/:locationId/reports:
-    parameters:
-      - $ref: '#/components/parameters/locationId'
-    post:
-      description: Report a location.
+  /events:
+    get:
+      description: Get events.
+      operationId: queryEvents
       tags:
+        - events
+      responses:
+        '206':
+          description: List of events.
+    post:
+      description: Add an event.
+      operationId: addEvent
+      tags:
+        - events
+      responses:
+        '201':
+          description: Event added.
+  /events/:eventId:
+    parameters:
+      - $ref: '#/components/parameters/eventId'
+    get:
+      description: Get an event.
+      operationId: getEvent
+      tags:
+        - events
+      responses:
+        '200':
+          description: Event retrieved.
+    patch:
+      description: Update an event.
+      operationId: updateEvent
+      tags:
+        - events
+      responses:
+        '204':
+          description: Event updated.
+  /reports:
+    get:
+      description: Get reports.
+      operationId: queryReports
+      tags:
+        - reports
+      responses:
+        '206':
+          description: List of reports.
+    post:
+      description: Report a resource.
+      operationId: report
+      tags:
+        - reports
+        - events
         - locations
       responses:
         '201':
-          description: Location reported.
+          description: Resource reported.
 components:
   parameters:
+    eventId:
+      name: eventId
+      in: path
+      description: The id of the event.
+      required: true
+      schema:
+        type: string
+        format: uuid
     locationId:
       name: locationId
       in: path
@@ -57,4 +113,4 @@ components:
       schema:
         type: string
         format: uuid
-      description: 'ID of the location.'
+      description: The ID of the location.
