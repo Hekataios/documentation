@@ -1,0 +1,60 @@
+openapi: '3.0.2'
+info:
+  title: Hekataios
+  version: '1.0'
+servers:
+  - url: https://api.hekataios.app
+paths:
+  /locations:
+    get:
+      description: Get locations
+      parameters: []
+      tags:
+        - locations
+      responses:
+        '206':
+          description: List of locations
+    post:
+      description: Add a location
+      tags:
+        - locations
+      responses:
+        '201':
+          description: Location added.
+  /locations/:locationId:
+    parameters:
+      - $ref: '#/components/parameters/locationId'
+    get:
+      description: Get a location.
+      tags:
+        - locations
+      responses:
+        '200':
+          description: Location retrieved.
+    patch:
+      description: Update a location.
+      tags:
+        - locations
+      responses:
+        '204':
+          description: Location updated.
+  /locations/:locationId/reports:
+    parameters:
+      - $ref: '#/components/parameters/locationId'
+    post:
+      description: Report a location.
+      tags:
+        - locations
+      responses:
+        '201':
+          description: Location reported.
+components:
+  parameters:
+    locationId:
+      name: locationId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+      description: 'ID of the location.'
