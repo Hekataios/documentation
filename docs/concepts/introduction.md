@@ -12,11 +12,11 @@ To adapt/install the tool set for your community, head over the [developers](../
 
 ## Features
 
-The main features are the [Cartographer](cartographer). It's a database to store roleplaying hubs, may they be permanent (such as a tavern) or temporary (such as the location of an event). These locations are updated/queried from an API and can be displayed on a map composed of a tileset (usually a map of the game itself). Being an API, the locations could also be pulled from a in-game addon. Additional modules could be added to the cartographer, such as a meteo module.
+The main features are the [Cartographer](cartographer/overview.md). It's a database to store roleplaying hubs, may they be permanent (such as a tavern) or temporary (such as the location of an event). These locations are updated/queried from an API and can be displayed on a map composed of a tileset (usually a map of the game itself). Being an API, the locations could also be pulled from a in-game addon. Additional modules could be added to the cartographer, such as a meteo module.
 
-Another usefull tool is the [Board](board): a database to store offers, ads, and gossips from over the world.
+Another usefull tool is the [Board](board/overview.md): a database to store offers, ads, and gossips from over the world.
 
-The [Kalendar](kalendar) track event dates and participants with a registration mechanics.
+The [Kalendar](kalendar/overview.md) track event dates and participants with a registration mechanics.
 
 ## Philosophy
 

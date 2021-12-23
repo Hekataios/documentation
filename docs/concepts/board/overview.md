@@ -12,7 +12,7 @@ The Board is a database of small piece of information accessible to players. The
 
 Players can declare their relation to information on the board as "interested". This metric is used to order the Board when there are too much entries.
 
-The Board can be sub-divided in smaller boards tied to areas of the worlds (regions, maps, ...) or even player defined [locations](../cartographer).
+The Board can be sub-divided in smaller boards tied to areas of the worlds (regions, maps, ...) or even player defined [locations](../cartographer/overview).
 
 Board nformation can be **reported** by players. The way reports are handled is configurable by the community. If the community is moderated by game masters, they can remove information reported by players or that don't follow the community guidelines. For non-moderated communities, reports can be automatically handled based on threesholds, votes or jurys.
 
