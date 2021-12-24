@@ -1,7 +1,20 @@
 {
-  "name": "documentation",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@hekataios/documentation",
+  "version": "1.0.0",
+  "description": "The documentation for the roleplaying cartographer toolset.",
+  "keywords": [
+    "tool",
+    "cartography",
+    "history",
+    "roleplay",
+    "documentation"
+  ],
+  "author": "Kevin 'Nakasar' Thizy <contact@nakasar.xyz>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Hekataios/documentation/issues"
+  },
+  "homepage": "https://github.com/Hekataios/documentation#readme",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
